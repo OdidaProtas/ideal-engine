@@ -10,6 +10,7 @@ import NewApp from "../pages/NewApp";
 import IntegrationDetail from "../pages/integrationDetail";
 import Pay from "../pages/Pay";
 import Billing from "./Billing";
+import Features from "../pages/Features";
 
 export default function Dashboard() {
   const { path } = useRouteMatch();
@@ -37,6 +38,9 @@ export default function Dashboard() {
           </Route>
           <Route exact path={`${path}/Integrations/:ctx`}>
             <IntegrationDetail />
+          </Route>
+          <Route path={`${path}/Features`}>
+            <Features />
           </Route>
           <Route exact path={`${path}/:id`}>
             <Filters />

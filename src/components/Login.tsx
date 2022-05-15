@@ -30,10 +30,13 @@ export default function Login({ signup, reset }: LoginInterface) {
         minHeight: "100vh",
       }}
     >
-      <Box sx={{ textAlign: "center" }} >
+      <Box sx={{ textAlign: "center", mt: 5 }} >
         <div  >
-          <Typography>Gis.ke API</Typography>
-          <Typography sx={{ my: 2 }} variant="h4" >
+          <Typography variant="h4" onClick={() => push("/")}  >Gis.ke API</Typography>
+          <Box sx={{ width: 580, my: 2 }} >
+            <Typography variant="caption"  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam culpa aut corporis aliquam at voluptate, laboriosam vero non enim. Consequatur fugit iusto architecto debitis quis, soluta accusantium minus exercitationem illo!</Typography>
+          </Box>
+          <Typography sx={{ my: 2 }} variant="h6" >
             {signup ? "Create Account" : "Login"}
           </Typography>
         </div>

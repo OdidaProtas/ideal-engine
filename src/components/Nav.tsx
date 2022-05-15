@@ -49,6 +49,13 @@ export default function Nav() {
       ]}
         Icon={() => <></>}
         name={"Billing"} />
+      <Divider sx={{ my: 2 }} />
+      <NavItem options={[
+        { name: "Add" },
+        { name: "Explore" }
+      ]}
+        Icon={() => <></>}
+        name={"Features"} />
     </List>
   );
 }
@@ -63,7 +70,7 @@ const NavItem = ({ name, Icon, options }: any) => {
       setOpen(!open);
       return;
     }
-    push("/dashboard/Billing")
+    push(`/dashboard/${name}`)
   };
   return (
     <>

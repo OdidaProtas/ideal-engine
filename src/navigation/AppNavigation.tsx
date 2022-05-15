@@ -6,7 +6,6 @@ import {
 import Dashboard from "../components/Dashboard";
 import Home from "../components/Home";
 import Auth from "../pages/Auth";
-import Plans from "../pages/Plans";
 
 export default function AppNavigation() {
   return (

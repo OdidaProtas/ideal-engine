@@ -25,9 +25,9 @@ export default function Home() {
       <Toolbar />
       <Container>
         <Box sx={{ my: 12 }} >
-          <Typography variant="h3" sx={{ mb: 2 }} >GIS.KE-API</Typography>
-          <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fugit molestias reprehenderit numquam laboriosam nulla est ullam cupiditate. Dicta qui ea vel dolores voluptatem, iusto praesentium officiis sequi aliquam nisi! </Typography>
-          <Divider />
+          <Typography variant="h5" sx={{ mb: 2 }} >Spatial APIs</Typography>
+          <Typography>A map, it is said represents an area</Typography>
+          <Divider sx={{ my: 2 }} />
         </Box>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam error vero perferendis officia possimus distinctio voluptas, ea laborum necessitatibus tempora reprehenderit deserunt saepe! Doloribus ea debitis illo libero repudiandae asperiores!
       </Container>

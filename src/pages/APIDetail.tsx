@@ -6,47 +6,60 @@ import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionActions from "@mui/material/AccordionActions";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Map from "./Map";
 export default function () {
     const { ctx } = useParams() as any;
     return (
         <>
-            <Typography variant="h5" sx={{ my: 2 }} >{ctx}</Typography>
-            <Box sx={{ my: 2 }} >
-                <Typography>ENDPOINT</Typography>
-                <Link>https://api.{window.location.hostname}.com/{ctx}</Link>
-            </Box>
-            <Box sx={{ my: 2 }}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eveniet quod distinctio, nemo officia impedit placeat cumque maiores ratione aliquid recusandae adipisci illo dicta cum rerum inventore libero incidunt velit!
-            </Box>
-            <Box>
-                <Accordion  >
-                    <AccordionSummary>
-                        Request Header
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sint quo rem illum harum iusto, numquam architecto optio repellat corrupti fugit libero? Iusto doloribus esse magnam, laborum corporis incidunt ea!
-                    </AccordionDetails>
-                    <AccordionActions />
-                </Accordion>
-                <Accordion  >
-                    <AccordionSummary>
-                        Request Parameters
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sint quo rem illum harum iusto, numquam architecto optio repellat corrupti fugit libero? Iusto doloribus esse magnam, laborum corporis incidunt ea!
-                    </AccordionDetails>
-                    <AccordionActions />
-                </Accordion>
-                <Accordion  >
-                    <AccordionSummary>
-                        Request Body
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sint quo rem illum harum iusto, numquam architecto optio repellat corrupti fugit libero? Iusto doloribus esse magnam, laborum corporis incidunt ea!
-                    </AccordionDetails>
-                    <AccordionActions />
-                </Accordion>
-            </Box>
+            <Grid container spacing={2} mt={2}  >
+                <Grid item xs  >
+                    <Paper sx={{ p: 2 }} >
+                        <Typography variant="h5" sx={{ my: 2 }} >{ctx}</Typography>
+                        <Box sx={{ my: 2 }} >
+                            <Typography>ENDPOINT</Typography>
+                            <Link>https://api.{window.location.hostname}.com/{ctx}</Link>
+                        </Box>
+                        <Box sx={{ my: 2 }}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eveniet quod distinctio, nemo officia impedit placeat cumque maiores ratione aliquid recusandae adipisci illo dicta cum rerum inventore libero incidunt velit!
+                        </Box>
+                        <Box>
+                            <Accordion  >
+                                <AccordionSummary>
+                                    Request Header
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sint quo rem illum harum iusto, numquam architecto optio repellat corrupti fugit libero? Iusto doloribus esse magnam, laborum corporis incidunt ea!
+                                </AccordionDetails>
+                                <AccordionActions />
+                            </Accordion>
+                            <Accordion  >
+                                <AccordionSummary>
+                                    Request Parameters
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sint quo rem illum harum iusto, numquam architecto optio repellat corrupti fugit libero? Iusto doloribus esse magnam, laborum corporis incidunt ea!
+                                </AccordionDetails>
+                                <AccordionActions />
+                            </Accordion>
+                            <Accordion  >
+                                <AccordionSummary>
+                                    Request Body
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sint quo rem illum harum iusto, numquam architecto optio repellat corrupti fugit libero? Iusto doloribus esse magnam, laborum corporis incidunt ea!
+                                </AccordionDetails>
+                                <AccordionActions />
+                            </Accordion>
+                        </Box>
+                    </Paper>
+                </Grid>
+                <Grid item xs >
+                    <Map className="smallMap" ></Map>
+                </Grid>
+            </Grid>
+
         </>
     )
 }
