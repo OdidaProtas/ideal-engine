@@ -34,14 +34,14 @@ export default function Login({ signup, reset }: LoginInterface) {
         <div  >
           <Typography variant="h4" onClick={() => push("/")}  >Gis.ke API</Typography>
           <Box sx={{ width: 580, my: 2 }} >
-            <Typography variant="caption"  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam culpa aut corporis aliquam at voluptate, laboriosam vero non enim. Consequatur fugit iusto architecto debitis quis, soluta accusantium minus exercitationem illo!</Typography>
+            <Typography variant="caption" sx={{ color: "text.secondary" }}  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam culpa aut corporis aliquam!</Typography>
           </Box>
           <Typography sx={{ my: 2 }} variant="h6" >
             {signup ? "Create Account" : "Login"}
           </Typography>
         </div>
         <form onSubmit={handleSubmit}>
-          <Stack sx={{ minWidth: 400 }} spacing={1} >
+          <Stack sx={{ minWidth: 400 }} spacing={2} >
             <TextField
               required
               label="Email Address"

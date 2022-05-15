@@ -18,16 +18,20 @@ export default function AppDetail() {
         <>
             <Box>
                 <Paper sx={{ p: 2, mt: 2 }}  >
-                    <Box>
-                        <Typography>Name: Name-app</Typography>
-                        <Typography>Lorem ispum sit dolor</Typography>
-                        <Divider sx={{ my: 2 }} />
+                    <Box sx={{ display: "flex", justifyContent: "space-between" }} >
+                        <Box>
+                            <Typography>Name: Name-app</Typography>
+                            <Typography>Lorem ispum sit dolor</Typography>
+                        </Box>
+
                         <Box>
                             <IconButton>
                                 <SettingsIcon />
                             </IconButton>
                         </Box>
+
                     </Box>
+                    <Divider sx={{ my: 2 }} />
                 </Paper>
                 <Box sx={{ mt: 2 }} >
                     <Grid container spacing={2}  >

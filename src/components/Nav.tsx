@@ -18,6 +18,8 @@ import StraightenIcon from '@mui/icons-material/Straighten';
 import AddCircleOutlineTwoToneIcon from '@mui/icons-material/AddCircleOutlineTwoTone';
 import ApiIcon from '@mui/icons-material/Api';
 import { useHistory } from "react-router";
+import BillingIcon from "@mui/icons-material/Payment"
+import PinIcon from "@mui/icons-material/PinDrop"
 
 const NavOptions = [{ name: "APPS", Icon: AppSettingsAltTwoToneIcon, options: [{ name: "fictional-octo", icon: <ApiIcon /> }] }, { name: "Integrations", Icon: ReactIcon, options: [{ name: "React", icon: <IntegrationInstructionsIcon /> }, { name: "Angular", icon: <IntegrationInstructionsIcon /> }, { name: "Vue", icon: <IntegrationInstructionsIcon /> }, { name: "Svelte", icon: <IntegrationInstructionsIcon /> }, { name: "D3.js", icon: <IntegrationInstructionsIcon /> }, { name: "turfs.js", icon: <IntegrationInstructionsIcon /> }] }];
 
@@ -44,17 +46,17 @@ export default function Nav() {
       {NavOptions.map((o: any, i: number) => (
         <NavItem Icon={o.Icon} options={o.options} name={o.name} key={i} />
       ))}
-      <Divider sx={{ my: 2 }} />
+      <Divider />
       <NavItem options={[
       ]}
-        Icon={() => <></>}
+        Icon={BillingIcon}
         name={"Billing"} />
-      <Divider sx={{ my: 2 }} />
+      <Divider />
       <NavItem options={[
         { name: "Add" },
         { name: "Explore" }
       ]}
-        Icon={() => <></>}
+        Icon={PinIcon}
         name={"Features"} />
     </List>
   );
